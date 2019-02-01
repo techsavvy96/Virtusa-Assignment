@@ -7,16 +7,12 @@ function calculate() {
   var total = document.getElementById("total");
   var totalinterest = document.getElementById("totalinterest");
   
-// Get the user's input from the input elements.
-// Convert interest from a percentage to a decimal, and convert from
-// an annual rate to a monthly rate. Convert payment period in years
-// to the number of monthly payments.
 var principal = parseFloat(amount.value);
 var interest = parseFloat(apr.value) / 100 / 12;
 var payments = parseFloat(years.value) * 12;
   
-// compute the monthly payment figure
-var x = Math.pow(1 + interest, payments); //Math.pow computes powers
+
+var x = Math.pow(1 + interest, payments); 
 var monthly = (principal*x*interest)/(x-1);
 
 // If the result is a finite number, the user's input was good and
